@@ -1,8 +1,13 @@
 void setup()
 {
-    // code exécuter au départ de l'exécution du code
+    // definition du mode de l'I/O
+    pinMode(2, OUTPUT);
 }
+
 void loop()
 {
-    // boucle d'exécution infinie
+    digitalWrite(2, HIGH);
+    delay(750);
+    digitalWrite(2, LOW);
+    delay(750);
 }
