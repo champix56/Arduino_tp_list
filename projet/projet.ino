@@ -1,13 +1,15 @@
-void setup()
-{
-    // definition du mode de l'I/O
-    pinMode(2, OUTPUT);
+void setup() {
+  //definition du mode de l'I/O
+  pinMode(2, OUTPUT);
+  pinMode(3, INPUT);
 }
 
-void loop()
-{
+void loop() {
+  bool isD3Pushed=digitalRead(3);
+  if(isD3Pushed){
     digitalWrite(2, HIGH);
-    delay(750);
+  }
+  else {
     digitalWrite(2, LOW);
-    delay(750);
+  }
 }

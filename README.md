@@ -100,3 +100,48 @@ projet1.fzz
 ![projet 1](./img/projet1.png)
 
 ----------
+
+# Projet 2
+
+Lecture numérique TOR sans gestion d'interruption, et écriture en fonction de l'état de l'entrée
+
+## 2.1. composants
+
+- arduino uno
+- 1x push button
+- 1x led
+- 2x résistances
+
+## 2.2. code
+
+~~~c
+    void setup() {
+        //définition du mode de l'I/O
+        pinMode(2, OUTPUT);
+        pinMode(3, INPUT);
+    }
+
+    void loop() {
+        //lecture de l'état de l'entrée
+        bool isD3Pushed=digitalRead(3);
+        if(isD3Pushed){
+            digitalWrite(2, HIGH);
+        }
+        else {
+            digitalWrite(2, LOW);
+        }
+    }
+~~~
+
+### 2.2.1. **digitalRead(*IOPin*)**
+
+Lecture d'état numérique HAUT ou BAS simple sur une entrée numérique (TOR)
+
+- *IOPin* : [cf. : valeur ou nom de l'entrée](#iopin)
+
+## 2.3. montage
+
+projet.fzz
+![projet 2](img/projet2.png)
+
+----------
